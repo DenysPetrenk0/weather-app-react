@@ -12,19 +12,18 @@ function App() {
     const fetchWeather = async (city) => {
         try {
             const apiKey = "87bad73e18d0c32ee48cd8e436f5a077";
-            const city2 = "Dnipro"
+            const apiKey1 = "T64KL3UJR2YSAWRZDR3VYHV7Q";
 
-            const geoResponse = await fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${city2}&appid=${apiKey}`);
-            const geoData = await geoResponse.json();
-            console.log(geoData)
+            // const geoResponse = await fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${city}&appid=${apiKey}`);
+            // const geoData = await geoResponse.json();
+            // console.log(geoData)
 
-            if (geoData.length === 0) {
-                throw new Error("місто не знайдено");
-            }
-
-            const {lat, lon} = geoData[0];
-            const weatherResponse = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${apiKey}`);
+            // const {lat, lon} = geoData[0];
+            const weatherResponse = await fetch(`https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${city}?unitGroup=metric&key=${apiKey1}&contentType=json`);
             const weatherData = await weatherResponse.json();
+            // if (geoData.length === 0) {
+            //     throw new Error("місто не знайдено");
+            // }
             console.log(weatherData)
 
             dispatch(setWeather(weatherData));
