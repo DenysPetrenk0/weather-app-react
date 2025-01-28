@@ -1,3 +1,3 @@
 import styled from "styled-components";
 
-export const SearchBarStyled = styled.div``;
+export const SearchBarStyled = styled.button``;

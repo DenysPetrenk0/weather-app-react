@@ -1,9 +1,9 @@
 import React from "react";
 import {SearchBarStyled} from "./SearchBarStyled";
 
-const SearchBar = () => {
+const SearchBar = ({onSearch}) => {
 	return (
-		<SearchBarStyled></SearchBarStyled>
+		<SearchBarStyled onClick={onSearch}>search</SearchBarStyled>
 	)
 };
 
