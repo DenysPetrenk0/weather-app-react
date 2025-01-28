@@ -5,9 +5,7 @@ const SearchBar = ({onSearch}) => {
 	const [city, setCity] = useState();
 
 	const handleSearch = () => {
-		if (city.trim()) {
-			onSearch(city)
-		}
+		onSearch(city)
 	}
 
 	return (

@@ -4,7 +4,6 @@ const weatherSlice = createSlice({
 	name: "weather",
 	initialState: {
 		data: null,
-		error: null,
 		searchHistory: [],
 		catch: {}
 	},
@@ -24,13 +23,13 @@ const weatherSlice = createSlice({
 			state.error = action.payload;
 		},
 
-		clearError(state) {
-			state.error = null;
-		}
+		// clearError(state) {
+		// 	state.error = null;
+		// }
 	}
 });
 
-export const {setWeather, clearError, setError} = weatherSlice.actions;
+export const {setWeather, setError} = weatherSlice.actions;
 
 const store = configureStore({
 	reducer: {
