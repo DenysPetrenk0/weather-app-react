@@ -1,9 +1,14 @@
 import React from "react";
 import {WeatherInfoStyled} from "./WeatherInfoStyled";
 
-const WeatherInfo = () => {
+const WeatherInfo = ({weather}) => {
+	console.log(weather)
+	const {name, main} = weather;
 	return (
-		<WeatherInfoStyled>info</WeatherInfoStyled>
+		<WeatherInfoStyled>
+			<p>{name}</p>
+			<p></p>
+		</WeatherInfoStyled>
 		)
 };
 

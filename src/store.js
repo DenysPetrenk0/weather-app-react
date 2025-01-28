@@ -10,14 +10,14 @@ const weatherSlice = createSlice({
 	},
 	reducers: {
 		setWeather(state, action) {
-			const {city, weatherData} = action.payload;
-			state.data = weatherData;
+			// const {city, weatherData} = action.payload;
+			state.data = action.payload;
 
-			state.catch[city.toLowerCase()] = weatherData;
+			// state.catch[city.toLowerCase()] = weatherData;
 
-			if (!state.searchHistory.includes(city.toLowerCase())) {
-				state.searchHistory.push(city.toLowerCase());
-			}
+			// if (!state.searchHistory.includes(city.toLowerCase())) {
+			// 	state.searchHistory.push(city.toLowerCase());
+			// }
 		},
 
 		setError(state, action) {

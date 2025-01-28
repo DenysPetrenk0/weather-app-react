@@ -1,9 +1,20 @@
-import React from "react";
+import React, {useState} from "react";
 import {SearchBarStyled} from "./SearchBarStyled";
 
 const SearchBar = ({onSearch}) => {
+	const [city, setCity] = useState();
+
+	const handleSearch = () => {
+		if (city.trim()) {
+			onSearch(city)
+		}
+	}
+
 	return (
-		<SearchBarStyled onClick={onSearch}>search</SearchBarStyled>
+		<SearchBarStyled>
+			<input type="text" onChange={(event) => setCity(event.target.value)}/>
+			<button onClick={handleSearch}>search</button>
+		</SearchBarStyled>
 	)
 };
 
