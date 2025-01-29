@@ -1,13 +1,15 @@
 import React from "react";
 import {WeatherInfoStyled} from "./WeatherInfoStyled";
 
-const WeatherInfo = ({weather}) => {
-	console.log(weather)
-	const {name, main} = weather;
+const WeatherInfo = ({current}) => {
+	const {temp_c, feelslike_c, condition, wind_kph} = current;
 	return (
 		<WeatherInfoStyled>
-			<p>{name}</p>
-			<p></p>
+			<p>температура{temp_c}</p>
+			<p>Відчувається як температура{feelslike_c}</p>
+			<p>Текст про погодні умови{condition.text}</p>
+			<img src={condition.icon} alt="icon"/>
+			<p>Швидкість вітру в{wind_kph}</p>
 		</WeatherInfoStyled>
 		)
 };
