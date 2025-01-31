@@ -3,18 +3,35 @@
       grid-template-columns: repeat(5, 1fr);
       grid-template-rows: repeat(5, 1fr);
       gap: 8px;
+      padding: 30px;
 }
+
+ .title {
+     text-align: center;
+     margin-top: 30px;
+     font-size: 40px;
+ }
+
+ .title_box {
+     position: relative;
+ }
+
+ .title_icon{
+     top: 35px;
+     left: 130px;
+     position: absolute;
+     fill: rgb(208, 198, 18);
+ }
 
 .current_day_info_border {
       grid-row: span 2 / span 2;
-      margin: 30px;
       padding: 10px;
       border-radius: 20px;
       background: linear-gradient(107deg, rgba(34,135,203,255) 0%, rgba(70,165,222,255) 100%);
       width: 420px;
-      height: 220px;
+      height: 200px;
       position: relative;
-      box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
 }
 
  .current_day_info {
@@ -25,8 +42,8 @@
      border-radius: 20px;
      background: linear-gradient(107deg, rgba(22,157,239,255) 0%, rgba(85,186,238,255) 100%);
      width: 400px;
-     height: 200px;
-     box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.2);
+     height: 180px;
+     box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
      padding: 20px;
  }
 
@@ -76,13 +93,11 @@
      grid-row: span 2 / span 2;
      grid-column-start: 1;
      grid-row-start: 4;
-     margin-left: 30px;
-     margin-bottom: 30px;
      padding: 20px;
      border-radius: 20px;
      background: linear-gradient(107deg, rgba(34,135,203,255) 0%, rgba(70,165,222,255) 100%);
-     box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.2);
-     height: 220px;
+     box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
+     height: 200px;
      width: 500px;
  }
 
@@ -93,9 +108,9 @@
     transform: translate(-50%, -50%);
     border-radius: 20px;
     background: linear-gradient(107deg, rgba(22,157,239,255) 0%, rgba(85,186,238,255) 100%);
-    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
     padding: 20px;
-    height: 200px;
+    height: 180px;
     width: 480px;
     display: flex;
     justify-content: space-around
@@ -120,9 +135,9 @@
     text-align: center;
 }
 
-.div6 {
-  grid-column: span 2 / span 2;
-  grid-row: span 2 / span 2;
-  grid-column-start: 4;
-  grid-row-start: 1;
+.info_time {
+    grid-column: span 2 / span 2;
+    grid-row: span 2 / span 2;
+    grid-column-start: 4;
+    grid-row-start: 1;
 }

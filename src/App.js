@@ -6,7 +6,8 @@ import fetchWeather from "./service/apiService";
 import ListNextDayInfo from "./components/nextDaysInfo/ListNextDayInfo";
 import icons from "./icon/icon.svg"
 import React from "react";
-import CurrentWeek from "./components/currentWeek/CurrentWeek";
+import CurrentDay from "./components/currentDay/CurrentDay";
+import InfoCity from "./components/infoCity/InfoCity";
 
 function App() {
     const dispatch = useDispatch();
@@ -21,6 +22,7 @@ function App() {
                     return;
                 }
                 dispatch(setWeather(response.data));
+                dispatch(setError(""));
             })
             .catch((error) => dispatch(setError(error.message)))
     }
@@ -65,6 +67,12 @@ function App() {
                 </div>
             </div>
         </div>
+        <div className="title_box">
+            <svg className="title_icon" height="40" width="40">
+                <use href={icons + "#umbrella"}></use>
+            </svg>
+            <h1 className="title">weather</h1>
+        </div>
         <div className="temp_info_border">
             <div className="temp_info">
                 <div className="temp_info_box">
@@ -78,10 +86,12 @@ function App() {
             </div>
         </div>
 
-        <ListNextDayInfo weather={weather} />
-        <CurrentWeek weather={weather} />
+        <ListNextDayInfo />
+        <CurrentDay />
         <SearchBar onSearch={makeRequest} />
-        <div className="div6">time</div>
+        <div className="info_time">
+            {error ? <div>введіть вірну назву міста</div> : <InfoCity />}
+        </div>
     </div>
   );
 }

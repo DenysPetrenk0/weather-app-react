@@ -14,7 +14,7 @@ const ItemNextDayInfo = ({forecastday}) => {
 		<ItemNextDayInfoStyled>
 			<p>{getWeekday(forecastday.date)}</p>
 			<img src={condition.icon} alt="icon"/>
-			<p>{mintemp_c} - {maxtemp_c}</p>
+			<p>{mintemp_c} {maxtemp_c}</p>
 		</ItemNextDayInfoStyled>
 	)
 };
