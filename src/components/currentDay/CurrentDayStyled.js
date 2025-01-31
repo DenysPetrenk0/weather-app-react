@@ -1,10 +1,10 @@
 import styled from "styled-components";
 
-export const CurrentWeekStyled = styled.div`
+export const CurrentDayStyled = styled.div`
   grid-column: span 4 / span 4;
   grid-row-start: 4;
   background: linear-gradient(107deg, rgba(34,135,203,255) 0%, rgba(70,165,222,255) 100%);
-  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
   padding: 10px;
   border-radius: 20px;
   position: relative;
@@ -19,7 +19,7 @@ export const CurrentWeekStyled = styled.div`
     transform: translate(-50%, -50%);
     border-radius: 20px;
     background: linear-gradient(107deg, rgba(22,157,239,255) 0%, rgba(85,186,238,255) 100%);
-    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
     padding: 20px;
 	display: flex;
 	width: 880px;
@@ -42,5 +42,7 @@ export const CurrentWeekStyled = styled.div`
   .current {
 	background: white;
 	color: rgba(85,186,238,255);
+	scale: 1.3;
+	border-radius: 10px;
   }
 `;
